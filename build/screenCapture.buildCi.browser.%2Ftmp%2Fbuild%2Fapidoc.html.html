@@ -1,0 +1,778 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>node-plantuml (v0.5.0)</a>
+</h1>
+<h4>A Node.js module and CLI for running PlantUML</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-plantuml">module node-plantuml</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-plantuml.decode">
+            function <span class="apidocSignatureSpan">node-plantuml.</span>decode
+            <span class="apidocSignatureSpan">(encoded, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-plantuml.encode">
+            function <span class="apidocSignatureSpan">node-plantuml.</span>encode
+            <span class="apidocSignatureSpan">(input, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-plantuml.generate">
+            function <span class="apidocSignatureSpan">node-plantuml.</span>generate
+            <span class="apidocSignatureSpan">(input, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-plantuml.testdot">
+            function <span class="apidocSignatureSpan">node-plantuml.</span>testdot
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-plantuml.useNailgun">
+            function <span class="apidocSignatureSpan">node-plantuml.</span>useNailgun
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-plantuml.</span>node_plantuml</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-plantuml.</span>plantuml_executor</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-plantuml.node_plantuml">module node-plantuml.node_plantuml</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-plantuml.node_plantuml.decode">
+            function <span class="apidocSignatureSpan">node-plantuml.node_plantuml.</span>decode
+            <span class="apidocSignatureSpan">(encoded, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-plantuml.node_plantuml.encode">
+            function <span class="apidocSignatureSpan">node-plantuml.node_plantuml.</span>encode
+            <span class="apidocSignatureSpan">(input, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-plantuml.node_plantuml.generate">
+            function <span class="apidocSignatureSpan">node-plantuml.node_plantuml.</span>generate
+            <span class="apidocSignatureSpan">(input, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-plantuml.node_plantuml.testdot">
+            function <span class="apidocSignatureSpan">node-plantuml.node_plantuml.</span>testdot
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-plantuml.node_plantuml.useNailgun">
+            function <span class="apidocSignatureSpan">node-plantuml.node_plantuml.</span>useNailgun
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-plantuml.plantuml_executor">module node-plantuml.plantuml_executor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-plantuml.plantuml_executor.exec">
+            function <span class="apidocSignatureSpan">node-plantuml.plantuml_executor.</span>exec
+            <span class="apidocSignatureSpan">(argv, cwd, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-plantuml.plantuml_executor.useNailgun">
+            function <span class="apidocSignatureSpan">node-plantuml.plantuml_executor.</span>useNailgun
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-plantuml" id="apidoc.module.node-plantuml">module node-plantuml</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-plantuml.decode" id="apidoc.element.node-plantuml.decode">
+        function <span class="apidocSignatureSpan">node-plantuml.</span>decode
+        <span class="apidocSignatureSpan">(encoded, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">decode = function (encoded, callback) {
+  var child = plantumlExecutor.exec([DECODE, encoded], callback)
+
+  return {
+    out: child.stdout
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var app = express();
+
+plantuml.useNailgun(); // Activate the usage of Nailgun
+
+app.get('/png/:uml', function(req, res) {
+  res.set('Content-Type', 'image/png');
+
+  var decode = plantuml.<span class="apidocCodeKeywordSpan">decode</span>(req.params.uml);
+  var gen = plantuml.generate({format: 'png'});
+
+  decode.out.pipe(gen.in);
+  gen.out.pipe(res);
+});
+
+app.get('/svg/:uml', function(req, res) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-plantuml.encode" id="apidoc.element.node-plantuml.encode">
+        function <span class="apidocSignatureSpan">node-plantuml.</span>encode
+        <span class="apidocSignatureSpan">(input, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">encode = function (input, options, callback) {
+  var args = arrangeArguments(input, options, callback)
+  input = args.input
+  options = args.options || {}
+  callback = args.callback
+
+  var encodeStream = new PlantumlEncodeStream()
+
+  if (typeof callback === 'function') {
+    var chunks = []
+    encodeStream.on('data', function (chunk) { chunks.push(chunk) })
+    encodeStream.on('end', function () {
+      var data = Buffer.concat(chunks)
+      callback(null, data.toString())
+    })
+  }
+
+  if (!input) {
+    return encodeFromStdin(encodeStream)
+  } else {
+    if (isPath(input, callback)) {
+      return encodeFromFile(input, encodeStream)
+    } else {
+      return encodeFromText(input, encodeStream)
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  gen.out.pipe(process.stdout)
+}
+}
+
+function encode (file, options) {
+var en
+if (file) {
+  en = plantuml.<span class="apidocCodeKeywordSpan">encode</span>(file)
+} else if (options.text) {
+  en = plantuml.encode(options.text)
+} else {
+  en = plantuml.encode()
+  process.stdin.pipe(en.in)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-plantuml.generate" id="apidoc.element.node-plantuml.generate">
+        function <span class="apidocSignatureSpan">node-plantuml.</span>generate
+        <span class="apidocSignatureSpan">(input, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generate = function (input, options, callback) {
+  var args = arrangeArguments(input, options, callback)
+  input = args.input
+  options = args.options || {}
+  callback = args.callback
+
+  var o = joinOptions([PIPE], options)
+  var child = plantumlExecutor.exec(o, options.include, callback)
+
+  if (!input) {
+    return generateFromStdin(child)
+  } else {
+    if (isPath(input, callback)) {
+      return generateFromFile(input, child)
+    } else {
+      return generateFromText(input, child)
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Diagrams can be created from source files.
+
+```javascript
+var plantuml = require('node-plantuml');
+var fs = require('fs');
+
+var gen = plantuml.<span class="apidocCodeKeywordSpan">generate</span>("input-file");
+gen.out.pipe(fs.createWriteStream("output-file.png");
+```
+
+If your application will be making multiple PlantUML requests, it might be a good idea to enable the usage of Nailgun.
+
+Following is an example of a simple web server for generating images from encoded PlantUML source.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-plantuml.testdot" id="apidoc.element.node-plantuml.testdot">
+        function <span class="apidocSignatureSpan">node-plantuml.</span>testdot
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">testdot = function (callback) {
+  var child = plantumlExecutor.exec([TESTDOT])
+
+  var chunks = []
+  child.stdout.on('data', function (chunk) { chunks.push(chunk) })
+  child.stdout.on('end', function () {
+    var data = Buffer.concat(chunks)
+    var dotOkCheck = 'Installation seems OK. File generation OK'
+    var dotOk = data.toString().indexOf(dotOkCheck) !== -1
+    if (typeof callback === 'function') callback(dotOk)
+  })
+
+  return {
+    out: child.stdout
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function decode (url, options) {
+var de = plantuml.decode(url)
+de.out.pipe(process.stdout)
+}
+
+function testdot () {
+var dot = plantuml.<span class="apidocCodeKeywordSpan">testdot</span>()
+dot.out.pipe(process.stdout)
+}
+
+commander.version(pack.version)
+
+commander
+.command('generate [file]')
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-plantuml.useNailgun" id="apidoc.element.node-plantuml.useNailgun">
+        function <span class="apidocSignatureSpan">node-plantuml.</span>useNailgun
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">useNailgun = function (callback) {
+  var options = { address: LOCALHOST, port: GENERATE_PORT }
+  nailgunServer = nailgun.createServer(options, function (port) {
+    clientOptions = {
+      host: LOCALHOST,
+      port: port
+    }
+
+    ngClient.exec('ng-cp', [PLANTUML_JAR], clientOptions)
+    ngClient.exec('ng-cp', [PLANTUML_NAIL_JAR], clientOptions)
+
+    // Give Nailgun some time to load the classpath
+    setTimeout(function () {
+      nailgunRunning = true
+      if (typeof callback === 'function') {
+        callback()
+      }
+    }, 50)
+  })
+
+  return nailgunServer
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```javascript
+var express = require('express');
+var plantuml = require('node-plantuml');
+
+var app = express();
+
+plantuml.<span class="apidocCodeKeywordSpan">useNailgun</span>(); // Activate the usage of Nailgun
+
+app.get('/png/:uml', function(req, res) {
+res.set('Content-Type', 'image/png');
+
+var decode = plantuml.decode(req.params.uml);
+var gen = plantuml.generate({format: 'png'});
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-plantuml.node_plantuml" id="apidoc.module.node-plantuml.node_plantuml">module node-plantuml.node_plantuml</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-plantuml.node_plantuml.decode" id="apidoc.element.node-plantuml.node_plantuml.decode">
+        function <span class="apidocSignatureSpan">node-plantuml.node_plantuml.</span>decode
+        <span class="apidocSignatureSpan">(encoded, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">decode = function (encoded, callback) {
+  var child = plantumlExecutor.exec([DECODE, encoded], callback)
+
+  return {
+    out: child.stdout
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var app = express();
+
+plantuml.useNailgun(); // Activate the usage of Nailgun
+
+app.get('/png/:uml', function(req, res) {
+  res.set('Content-Type', 'image/png');
+
+  var decode = plantuml.<span class="apidocCodeKeywordSpan">decode</span>(req.params.uml);
+  var gen = plantuml.generate({format: 'png'});
+
+  decode.out.pipe(gen.in);
+  gen.out.pipe(res);
+});
+
+app.get('/svg/:uml', function(req, res) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-plantuml.node_plantuml.encode" id="apidoc.element.node-plantuml.node_plantuml.encode">
+        function <span class="apidocSignatureSpan">node-plantuml.node_plantuml.</span>encode
+        <span class="apidocSignatureSpan">(input, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">encode = function (input, options, callback) {
+  var args = arrangeArguments(input, options, callback)
+  input = args.input
+  options = args.options || {}
+  callback = args.callback
+
+  var encodeStream = new PlantumlEncodeStream()
+
+  if (typeof callback === 'function') {
+    var chunks = []
+    encodeStream.on('data', function (chunk) { chunks.push(chunk) })
+    encodeStream.on('end', function () {
+      var data = Buffer.concat(chunks)
+      callback(null, data.toString())
+    })
+  }
+
+  if (!input) {
+    return encodeFromStdin(encodeStream)
+  } else {
+    if (isPath(input, callback)) {
+      return encodeFromFile(input, encodeStream)
+    } else {
+      return encodeFromText(input, encodeStream)
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  gen.out.pipe(process.stdout)
+}
+}
+
+function encode (file, options) {
+var en
+if (file) {
+  en = plantuml.<span class="apidocCodeKeywordSpan">encode</span>(file)
+} else if (options.text) {
+  en = plantuml.encode(options.text)
+} else {
+  en = plantuml.encode()
+  process.stdin.pipe(en.in)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-plantuml.node_plantuml.generate" id="apidoc.element.node-plantuml.node_plantuml.generate">
+        function <span class="apidocSignatureSpan">node-plantuml.node_plantuml.</span>generate
+        <span class="apidocSignatureSpan">(input, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generate = function (input, options, callback) {
+  var args = arrangeArguments(input, options, callback)
+  input = args.input
+  options = args.options || {}
+  callback = args.callback
+
+  var o = joinOptions([PIPE], options)
+  var child = plantumlExecutor.exec(o, options.include, callback)
+
+  if (!input) {
+    return generateFromStdin(child)
+  } else {
+    if (isPath(input, callback)) {
+      return generateFromFile(input, child)
+    } else {
+      return generateFromText(input, child)
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Diagrams can be created from source files.
+
+```javascript
+var plantuml = require('node-plantuml');
+var fs = require('fs');
+
+var gen = plantuml.<span class="apidocCodeKeywordSpan">generate</span>("input-file");
+gen.out.pipe(fs.createWriteStream("output-file.png");
+```
+
+If your application will be making multiple PlantUML requests, it might be a good idea to enable the usage of Nailgun.
+
+Following is an example of a simple web server for generating images from encoded PlantUML source.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-plantuml.node_plantuml.testdot" id="apidoc.element.node-plantuml.node_plantuml.testdot">
+        function <span class="apidocSignatureSpan">node-plantuml.node_plantuml.</span>testdot
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">testdot = function (callback) {
+  var child = plantumlExecutor.exec([TESTDOT])
+
+  var chunks = []
+  child.stdout.on('data', function (chunk) { chunks.push(chunk) })
+  child.stdout.on('end', function () {
+    var data = Buffer.concat(chunks)
+    var dotOkCheck = 'Installation seems OK. File generation OK'
+    var dotOk = data.toString().indexOf(dotOkCheck) !== -1
+    if (typeof callback === 'function') callback(dotOk)
+  })
+
+  return {
+    out: child.stdout
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function decode (url, options) {
+var de = plantuml.decode(url)
+de.out.pipe(process.stdout)
+}
+
+function testdot () {
+var dot = plantuml.<span class="apidocCodeKeywordSpan">testdot</span>()
+dot.out.pipe(process.stdout)
+}
+
+commander.version(pack.version)
+
+commander
+.command('generate [file]')
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-plantuml.node_plantuml.useNailgun" id="apidoc.element.node-plantuml.node_plantuml.useNailgun">
+        function <span class="apidocSignatureSpan">node-plantuml.node_plantuml.</span>useNailgun
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">useNailgun = function (callback) {
+  var options = { address: LOCALHOST, port: GENERATE_PORT }
+  nailgunServer = nailgun.createServer(options, function (port) {
+    clientOptions = {
+      host: LOCALHOST,
+      port: port
+    }
+
+    ngClient.exec('ng-cp', [PLANTUML_JAR], clientOptions)
+    ngClient.exec('ng-cp', [PLANTUML_NAIL_JAR], clientOptions)
+
+    // Give Nailgun some time to load the classpath
+    setTimeout(function () {
+      nailgunRunning = true
+      if (typeof callback === 'function') {
+        callback()
+      }
+    }, 50)
+  })
+
+  return nailgunServer
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```javascript
+var express = require('express');
+var plantuml = require('node-plantuml');
+
+var app = express();
+
+plantuml.<span class="apidocCodeKeywordSpan">useNailgun</span>(); // Activate the usage of Nailgun
+
+app.get('/png/:uml', function(req, res) {
+res.set('Content-Type', 'image/png');
+
+var decode = plantuml.decode(req.params.uml);
+var gen = plantuml.generate({format: 'png'});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-plantuml.plantuml_executor" id="apidoc.module.node-plantuml.plantuml_executor">module node-plantuml.plantuml_executor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-plantuml.plantuml_executor.exec" id="apidoc.element.node-plantuml.plantuml_executor.exec">
+        function <span class="apidocSignatureSpan">node-plantuml.plantuml_executor.</span>exec
+        <span class="apidocSignatureSpan">(argv, cwd, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exec = function (argv, cwd, callback) {
+  if (typeof argv === 'function') {
+    callback = argv
+    argv = undefined
+    cwd = undefined
+  } else if (typeof cwd === 'function') {
+    callback = cwd
+    cwd = undefined
+  }
+
+  var task
+  if (nailgunRunning) {
+    task = execWithNailgun(argv, cwd, callback)
+  } else {
+    task = execWithSpawn(argv, cwd, callback)
+  }
+
+  if (typeof callback === 'function') {
+    var chunks = []
+    task.stdout.on('data', function (chunk) { chunks.push(chunk) })
+    task.stdout.on('end', function () {
+      var data = Buffer.concat(chunks)
+      callback(null, data)
+    })
+    task.stdout.on('error', function () {
+      callback(new Error('error while reading plantuml output'), null)
+    })
+  }
+
+  return task
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+module.exports.generate = function (input, options, callback) {
+var args = arrangeArguments(input, options, callback)
+input = args.input
+options = args.options || {}
+callback = args.callback
+
+var o = joinOptions([PIPE], options)
+var child = plantumlExecutor.<span class="apidocCodeKeywordSpan">exec</span>(o, options.include, callback)
+
+if (!input) {
+  return generateFromStdin(child)
+} else {
+  if (isPath(input, callback)) {
+    return generateFromFile(input, child)
+  } else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-plantuml.plantuml_executor.useNailgun" id="apidoc.element.node-plantuml.plantuml_executor.useNailgun">
+        function <span class="apidocSignatureSpan">node-plantuml.plantuml_executor.</span>useNailgun
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">useNailgun = function (callback) {
+  var options = { address: LOCALHOST, port: GENERATE_PORT }
+  nailgunServer = nailgun.createServer(options, function (port) {
+    clientOptions = {
+      host: LOCALHOST,
+      port: port
+    }
+
+    ngClient.exec('ng-cp', [PLANTUML_JAR], clientOptions)
+    ngClient.exec('ng-cp', [PLANTUML_NAIL_JAR], clientOptions)
+
+    // Give Nailgun some time to load the classpath
+    setTimeout(function () {
+      nailgunRunning = true
+      if (typeof callback === 'function') {
+        callback()
+      }
+    }, 50)
+  })
+
+  return nailgunServer
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```javascript
+var express = require('express');
+var plantuml = require('node-plantuml');
+
+var app = express();
+
+plantuml.<span class="apidocCodeKeywordSpan">useNailgun</span>(); // Activate the usage of Nailgun
+
+app.get('/png/:uml', function(req, res) {
+res.set('Content-Type', 'image/png');
+
+var decode = plantuml.decode(req.params.uml);
+var gen = plantuml.generate({format: 'png'});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
