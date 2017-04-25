@@ -1,6 +1,6 @@
 # npmdoc-node-plantuml
 
-#### api documentation for  node-plantuml (v0.5.0)  [![npm package](https://img.shields.io/npm/v/npmdoc-node-plantuml.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-node-plantuml) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-node-plantuml.svg)](https://travis-ci.org/npmdoc/node-npmdoc-node-plantuml)
+#### basic api documentation for  [node-plantuml (v0.5.0)](https://github.com/markushedvall/node-plantuml)  [![npm package](https://img.shields.io/npm/v/npmdoc-node-plantuml.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-node-plantuml) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-node-plantuml.svg)](https://travis-ci.org/npmdoc/node-npmdoc-node-plantuml)
 
 #### A Node.js module and CLI for running PlantUML
 
@@ -21,37 +21,58 @@
 ```json
 
 {
-    "name": "node-plantuml",
-    "version": "0.5.0",
-    "description": "A Node.js module and CLI for running PlantUML",
-    "main": "index.js",
-    "author": "Markus Hedvall <mackanhedvall@gmail.com>",
-    "repository": "https://github.com/markushedvall/node-plantuml",
-    "license": "MIT",
-    "keywords": [
-        "plantuml",
-        "uml",
-        "diagram"
-    ],
+    "author": {
+        "name": "Markus Hedvall"
+    },
+    "bin": {
+        "puml": "index.js"
+    },
+    "bugs": {
+        "url": "https://github.com/markushedvall/node-plantuml/issues"
+    },
     "dependencies": {
         "commander": "^2.8.1",
         "node-nailgun-client": "^0.1.0",
         "node-nailgun-server": "^0.1.3",
         "plantuml-encoder": "^1.2.4"
     },
+    "description": "A Node.js module and CLI for running PlantUML",
     "devDependencies": {
         "chai": "^3.2.0",
         "mocha": "^2.3.1",
         "shelljs": "^0.5.3",
         "standard": "^5.0.2"
     },
-    "scripts": {
-        "test": "standard && node test/fixtures/prepare.js && mocha",
-        "build": "node nail/build.js"
+    "directories": {},
+    "dist": {
+        "shasum": "03c2ed856e6b272c714a1568453a747c266fdc1f",
+        "tarball": "https://registry.npmjs.org/node-plantuml/-/node-plantuml-0.5.0.tgz"
     },
-    "bin": {
-        "puml": "index.js"
-    }
+    "gitHead": "0b8d48c58c9632536180c4b10fe7e9af67a48f7d",
+    "homepage": "https://github.com/markushedvall/node-plantuml",
+    "keywords": [
+        "plantuml",
+        "uml",
+        "diagram"
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "maintainers": [
+        {
+            "name": "markushedvall"
+        }
+    ],
+    "name": "node-plantuml",
+    "optionalDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/markushedvall/node-plantuml.git"
+    },
+    "scripts": {
+        "build": "node nail/build.js",
+        "test": "standard && node test/fixtures/prepare.js && mocha"
+    },
+    "version": "0.5.0"
 }
 ```
 
